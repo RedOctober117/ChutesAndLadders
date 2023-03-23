@@ -15,3 +15,34 @@ The first player to reach the last square wins.
 ## Variations
 - A player must roll the exact amount of spaces to reach the last square, or they lose their turn.
 - A player must roll the exact amount of spaces to reach the last square. If they roll a larger number, they move to the end square and back again. For example, if a player requires a _3_ to win, but rolls a _5_, they move _3_ spaces to the win square, and backwards _2_.
+
+
+# Objects
+- Player token 
+- Die 
+- Board
+
+
+  _____________________ 
+  |                   |
+  |   *            *  |
+  |   *            *  |
+  |   *            *  |
+  |   *            *  |  
+  |   *            *  |
+  |   *            *  |
+  |___________________|
+
+
+
+               (( _______
+     _______     /\O    O\
+    /O     /\   /  \      \
+   /   O  /O \ / O  \O____O\ ))
+((/_____O/    \\    /O     /
+  \O    O\    / \  /   O  /
+   \O    O\ O/   \/_____O/
+    \O____O\/ )) mrf      ))
+  ((
+
+
