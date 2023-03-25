@@ -1,10 +1,12 @@
 public class Board{
-  public static void main(String[] args){
-    // Print top boundary
-    int i = 0;
-    int j = 0;
-    int k = 0;
-    while (i < 10){
+  public Board(){}
+  
+  public Board(int dimension){
+  // Print top boundary
+    private int i = 0;
+    private int j = 0;
+    private int k = 0;
+    while (i < dimension){
       while (j < 61){
         System.out.print("*");
         j++;
@@ -28,5 +30,18 @@ public class Board{
       System.out.print("*");
       j++;
     }
+  }
+
+
+
+/********************************
+ * 
+ * Tester Class 
+ * 
+ *******************************/
+ 
+  public static void main(String[] args){
+    Board b1 = new Board(10);
+    System.out.print(b1);
   }
 }
