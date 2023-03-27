@@ -1,8 +1,10 @@
 public class Board{
+
+
+  
   public Board(){}
   
   public Board(int dimension){
-  // Print top boundary
     private int i = 0;
     private int j = 0;
     private int k = 0;
@@ -35,9 +37,9 @@ public class Board{
 
 
 /********************************
- * 
- * Tester Class 
- * 
+ *                              *
+ *         Tester Class         *
+ *                              *
  *******************************/
  
   public static void main(String[] args){
