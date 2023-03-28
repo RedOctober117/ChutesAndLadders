@@ -1,21 +1,17 @@
 public class Board{
-
-
-  
-  public Board(){}
   
   public Board(int dimension){
-    private int i = 0;
-    private int j = 0;
-    private int k = 0;
+    int i = 0;
+    int j = 0;
+    int k = 0;
     while (i < dimension){
-      while (j < 61){
+      while (j < (6 * dimension) + 1){
         System.out.print("*");
         j++;
       }         
         System.out.print("\n");
         while (k < 23){
-           if (k == 11){
+           if (k == dimension + 1){
              System.out.print("\n");
              k++;
           } else {
@@ -28,7 +24,7 @@ public class Board{
         k = 0;
         i++;
       }
-    while (j < 61){
+    while (j < (6 * dimension) + 1){
       System.out.print("*");
       j++;
     }
