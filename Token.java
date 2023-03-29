@@ -1,7 +1,7 @@
 
 public class Token{
-  private int x;
-  private int y;
+  private int playerX;
+  private int playerY;
   private char initial;
   private String model;
 
@@ -12,9 +12,11 @@ public class Token{
 
   public Token(){}
 
-  public Token(char initialInput, int modelInput){
+  public Token(char initialInput, String modelInput, int playerX, int playerY){
     this.initial = initialInput;
-    switch(modelInput){
+    this.playerX = playerX;
+    this.playerY = playerY - 1;
+    /*switch(modelInput){
       case 1:
         this.model = MODEL1;
         break;
@@ -28,12 +30,24 @@ public class Token{
         this.model = MODEL4;
         break;
       default:
-        this.model = "";
+        this.model = "";*/
     }
-  }
+  
 
   public void setPosition(int newX, int newY){
-    this.x = newX;
-    this.y = newY;
+    this.playerX = newX;
+    this.playerY = newY - 1;
+  }
+
+  public int getPlayerX(){
+    return this.playerX;
+  }
+
+  public int getPlayerY(){
+    return this.playerY;
+  }
+
+  public char getInitial(){
+    return this.initial;
   }
 }
