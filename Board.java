@@ -1,34 +1,51 @@
 public class Board{
-  
+  public static final char BORDER = '*';
+  private int playerCount;
+  private int dimension;
+
   public Board(int dimension){
-    int i = 0;
-    int j = 0;
-    int k = 0;
-    while (i < dimension){
-      while (j < (6 * dimension) + 1){
+    this.dimension = dimension;
+    for (int i = 0; i < dimension; i++){
+      for (int j = 0; j < (6 * dimension) + 1; j++){
         System.out.print("*");
-        j++;
       }         
         System.out.print("\n");
-        while (k < 23){
+        for (int k = 0; k < 23; k++){
            if (k == dimension + 1){
              System.out.print("\n");
-             k++;
           } else {
-             System.out.print("*     ");
-             k++;
+             System.out.print("*     "); 
           }
         }
         System.out.print("\n");
-        j = 0;
-        k = 0;
-        i++;
       }
-    while (j < (6 * dimension) + 1){
+    for (int j = 0; j < (6 * dimension) + 1; j++){
       System.out.print("*");
-      j++;
     }
   }
+/*
+  public Board(int dimension, int playerCount){
+    this.dimension = dimension;
+    this.playerCount = playerCount;
+    for (int i = 0; i < dimension; i++){
+      for (int j = 0; j < (6 * dimension) + 1; j++){
+        System.out.print("*");
+      }         
+        System.out.print("\n");
+        for (int k = 0; k < 23; k++){
+           if (k == dimension + 1){
+             System.out.print("\n");
+          } else {
+             System.out.print("*     ");
+          }
+        }
+        System.out.print("\n");
+      }
+    for (int j = 0; j < (6 * dimension) + 1; j++){
+      System.out.print("*");
+    }
+  }
+*/
 
 
 
