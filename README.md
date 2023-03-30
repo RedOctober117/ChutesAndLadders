@@ -15,7 +15,7 @@
 - If a player lands at the top of a chute, they move to the foot of the chute.
 - Repeat for each player
 
-![[FlowChart.png]]
+![Process Diagram](assets/FlowChart.png)
 
 
 
@@ -28,13 +28,13 @@ The first player to reach the last square wins.
 
 
 # Objects
-- [[#PlayerToken]]
-- [[#Die]]
-- [[#Board]]
+- PlayerToken
+- Die
+- Board
 - (?)Board exploded
 
 ## Die
-I think it would be cool to have a short "animation" play while a die is "rolled", but that may not be feasible. Regardless, we need an object that will handle picking an `int` between `1` and `6`. Please refer to [[#Game Flow]] for further details.
+I think it would be cool to have a short "animation" play while a die is "rolled", but that may not be feasible. Regardless, we need an object that will handle picking an `int` between `1` and `6`. Please refer to Game Flow for further details.
 
 ---
 ## Board
@@ -53,7 +53,7 @@ Main view is a viewable 10x10 grid with colored letters to represent each player
 |95:75|-|
 |98:78|-|
 
-![[pic79293.webp]]
+![Original Board image](assets/pic79293.webp)
 
 ```java
 private int playerCount;
@@ -132,7 +132,7 @@ Game flow here
 
 ---
 # Variations
-_See: [[#Win Condition#Variations]]_
+_See: Win Condition#Variations_
 - Provide an animation of the piece moving by drawing an update as the piece passes each square.
 - If a player lands on an occupied square, the original occupants are moved back _n_ spaces. (maybe 2 spaces?)
 - A command can be given to show a blown up view of a square with the ascii art in place of the players' initials.
