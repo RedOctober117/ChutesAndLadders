@@ -1,5 +1,5 @@
 /**
- * Board allows a user to draw a Chutes and Ladders playspace and its players with a single command
+ * Board allows a user to draw a Chutes and Ladders playspace and its players with a single command.
  **/
 public class Board{
   private int playerCount;
