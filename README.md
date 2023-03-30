@@ -1,5 +1,19 @@
 # Chutes and Ladders
 
+# Work Detail
+## Preface
+I encourage everyone to read the both the documentation for the assignment, and the documentation I've written here and in my classes to make sure you have a full grasp of the project. I am arbitrarily assigning tasks. If you are not happy with your assignment, you're welcome to partner up or switch with someone else; as long as it gets done and everyone has written _something_. 
+
+You are welcome to change anything I have written so far, but what I have provided should be considered the working copy. 
+
+- **Christina** & **Ryan**: Finish the `Token` class. The logic for moving pieces within the bounds of the board should _probably_ be handled by the `Token` class, but discuss this with the game logic team. You may find a better solution, or another class entirely to handle character movement. If the team decides to implement ascii art for each player, it is your responsibility to manage that data.
+- **Joshua**: Create the `die` class. Consider including some animation for rolling, like ascii art moving on the screen. Remember, dice rolls will be used when deciding turn order and movement.
+- **David** & **Donnie**: You are responsible for the game logic, aka. the main class file. I have provided multiple breakdowns of how the game works. You should also work on the game menu, where the number of players and their data are input. 
+
+I would encourage all of you to meet regularly to discuss how the data will flow between your classes and methods. The project isn't complicated but it is absolutely an exercise in breaking a problem down to its smallest parts. 
+
+I will be available for code reviews every day. I will do my best to give direction, rather than rewrite something you have already written. Understanding the logic is the most important part, not _just_ getting it done.
+
 # Game Components
 
 - 10x10 Grid numbered from 1-100 from bottom left to top left
@@ -134,7 +148,8 @@ Game flow here
 # Variations
 _See: Win Condition#Variations_
 - Provide an animation of the piece moving by drawing an update as the piece passes each square.
-- If a player lands on an occupied square, the original occupants are moved back _n_ spaces. (maybe 2 spaces?)
+- If a player lands on an occupied square, the original occupants are moved back _n_ spaces (maybe 2?).
 - A command can be given to show a blown up view of a square with the ascii art in place of the players' initials.
 - Make sure the `Board` can accurately draw different board dimensions. I have some of the logic in there, but I have not checked it, as the assignment only calls for a size of 10x10.
 - Draw the chutes and ladders either on the existing board or on a duplicate board off to the side. Duplicate board would not contain the player pieces and only have a static visual of the chutes and ladders.
+- Provide an animation every time a die is rolled.
