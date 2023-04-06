@@ -114,10 +114,10 @@ public Board(int dimension, int playerCount, Token p1, Token p2, Token p3, Token
 *************************************************************
 ```
 
-- Range of player1: `j(2:56), increment by 8; i(2:29), increment by 5`
-- Range of player2: `j(4:58), increment by 8; i(2:29), increment by 5`
-- Range of player3: `j(2:56), increment by 8; i(3:30), increment by 5`
-- Range of player4: `j(4:58), increment by 8; i(3:30), increment by 5`
+- Range of player1: `j(2:56), increment by 6; i(2:29), increment by 5`
+- Range of player2: `j(4:58), increment by 6; i(2:29), increment by 5`
+- Range of player3: `j(2:56), increment by 6; i(3:30), increment by 5`
+- Range of player4: `j(4:58), increment by 6; i(3:30), increment by 5`
 
 Base additional coordinate movements off the base position of player1, (2, 2). `Token` will take care of offsets, after which the correct value will be passed to `Board` when called by a method. 
 
