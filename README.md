@@ -14,6 +14,16 @@ I would encourage all of you to meet regularly to discuss how the data will flow
 
 I will be available for code reviews every day. I will do my best to give direction, rather than rewrite something you have already written. Understanding the logic is the most important part, not _just_ getting it done.
 
+---
+
+
+# How to Run
+To compile and run `Dice.java`:
+`cd src/main`
+`javac -cp .:../lib/core.jar Dice.java`
+`java -cp .:../lib/core.jar Dice`
+
+
 # Game Components
 
 - 10x10 Grid numbered from 1-100 from bottom left to top left
