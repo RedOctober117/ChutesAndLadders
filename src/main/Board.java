@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//package chutes;
 /**
  * Board allows a user to draw a Chutes and Ladders playspace and its players with a single command.
  **/

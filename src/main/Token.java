@@ -1,15 +1,4 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//package chutes;
-
-/**
- *
- * @author rsdunn
- */
-/**
  * Token will create player objects that are then passed to Board() to draw the Chutes and Ladders playspace.
  */
 public class Token{
