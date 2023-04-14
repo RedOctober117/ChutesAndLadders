@@ -238,5 +238,6 @@ public static void main(String[] args){
     System.out.println("Player 2 is on space: " + player2.getSpace());
     System.out.println("Player 3 is on space: " + player3.getSpace());
     System.out.println("Player 4 is on space: " + player4.getSpace());
+    System.out.println(player1.getPlayerY());
   }
 }
