@@ -3,9 +3,9 @@ import java.util.Random;
 
 public class Dice extends PApplet {
 
-  int diceValue = 1;
-  int cycleCount = 0;
-  Random rand = new Random();
+  private int diceValue = 1;
+  private int cycleCount = 0;
+  private Random rand = new Random();
 
   public void settings() {
     size(200, 200);
@@ -67,12 +67,21 @@ public class Dice extends PApplet {
       textSize(20);
       fill(0);
       text("Your Roll: " + diceValue, width/2, height/5);
-      noLoop();
+      thread("closeWindow");
     }
   }
 
+  public void closeWindow() {
+    delay(1000); // wait for 1 second
+    exit();
+  }
+
+  // New public method to return the diceValue variable
+  public int getDiceValue() {
+    return diceValue;
+  }
+
   public static void main(String[] args) {
-    PApplet.main("Dice");
     PApplet.main("Dice");
   }
 }
