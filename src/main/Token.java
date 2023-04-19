@@ -1,4 +1,15 @@
 /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package chutes;
+
+/**
+ *
+ * @author rsdunn
+ */
+/**
  * Token will create player objects that are then passed to Board() to draw the Chutes and Ladders playspace.
  */
 public class Token{
@@ -6,6 +17,7 @@ public class Token{
   private int playerY;
   private char initial;
   private String model;
+  private int destination = 0;
   // These are not in use yet, but may be a solution for adding ascii art.
   public static final String MODEL1 = "Model 1";
   public static final String MODEL2 = "Model 2";
@@ -67,6 +79,10 @@ public class Token{
   public int getPlayerY(){
     return this.playerY;
   }
+  public int getPlayerYActual(){
+      int newValue = this.playerY+1;
+      return newValue;
+  }
 /**
  * Return a players initial.
  * @return char of player.
@@ -74,7 +90,6 @@ public class Token{
   public char getInitial(){
     return this.initial;
   }
-
 public int getSpace(){
     /*
         Summary:
@@ -98,7 +113,7 @@ public int getSpace(){
         there are 4 cases present: player1's character, player2's character, player3's character, or player4's character.
         the if statements check to see which player's space is requested.
     */
-    if ('a' == this.initial){
+    if ('1' == this.initial){
         /*
             these are the default coordinates of player 1.
         */
@@ -167,7 +182,7 @@ public int getSpace(){
                 }
             }
         }
-    } else if ('b' == this.initial){
+    } else if ('2' == this.initial){
         /*
             these are the default coordinates of player 2.
         */
@@ -207,7 +222,7 @@ public int getSpace(){
                 }
             }
         }
-    } else if ('c' == this.initial){
+    } else if ('3' == this.initial){
         /*
             these are the default coordinates of player 3.
         */
@@ -247,7 +262,7 @@ public int getSpace(){
                 }
             }
         }
-    } else if ('d' == this.initial){
+    } else if ('4' == this.initial){
         /*
             these are the default coordinates of player 4.
         */
@@ -288,105 +303,169 @@ public int getSpace(){
             }
         }
     }
+    if(coordinateSeekerSpace > 100 || coordinateSeekerSpace < 0){
+        coordinateSeekerSpace = 0;
+    }
     return coordinateSeekerSpace;
 }
-
-// Returns the play space of a player based upon their j
+// Returns the i of a space on the board for a specific player
 public int getSpaceX(int space){
-    if ('a' == this.initial || 'c' == this.initial){
+    int iValue = 0;
+    if ('1' == this.initial || '3' == this.initial){
         if (space <= 10){
-            return 2 + 6 * (space - 1);
+            iValue = 2 + 6 * (space - 1);
         } else if (space <= 20){
-            return 56 - 6 * (space - 11);
+            iValue = 56 - 6 * (space - 11);
         } else if (space <= 30){
-            return 2 + 6 * (space - 21);
+            iValue = 2 + 6 * (space - 21);
         } else if (space <= 40){
-            return 56 - 6 * (space - 31);
+            iValue = 56 - 6 * (space - 31);
         } else if (space <= 50){
-            return 2 + 6 * (space - 41);
+            iValue = 2 + 6 * (space - 41);
         } else if (space <= 60){
-            return 56 - 6 * (space-51);
+            iValue = 56 - 6 * (space-51);
         } else if (space <= 70){
-            return 2 + 6 * (space - 61);
+            iValue = 2 + 6 * (space - 61);
         } else if (space <= 80){
-            return 56 - 6 * (space-71);
+            iValue = 56 - 6 * (space-71);
         } else if (space <= 90){
-            return 2 + 6 * (space - 81);
+            iValue = 2 + 6 * (space - 81);
         } else if (space <= 100){
-            return 56 - 6 * (space - 91);
+            iValue = 56 - 6 * (space - 91);
+        } else {
+            iValue = 2;
         }
-    } else if ('b' == this.initial || 'd' == this.initial){
+    } else if ('2' == this.initial || '4' == this.initial){
         if (space <= 10){
-            return 4 + 6 * (space - 1);
+            iValue = 4 + 6 * (space - 1);
         } else if (space <= 20){
-            return 58 - 6 * (space - 11);
+            iValue = 58 - 6 * (space - 11);
         } else if (space <= 30){
-            return 4 + 6 * (space - 21);
+            iValue = 4 + 6 * (space - 21);
         } else if (space <= 40){
-            return 58 - 6 * (space - 31);
+            iValue = 58 - 6 * (space - 31);
         } else if (space <= 50){
-            return 4 + 6 * (space - 41);
+            iValue = 4 + 6 * (space - 41);
         } else if (space <= 60){
-            return 58 - 6 * (space - 51);
+            iValue = 58 - 6 * (space - 51);
         } else if (space <= 70){
-            return 4 + 6 * (space - 61);
+            iValue = 4 + 6 * (space - 61);
         } else if (space <= 80){
-            return 58 - 6 * (space-71);
+            iValue = 58 - 6 * (space-71);
         } else if (space <= 90){
-            return 4 + 6 * (space - 81);
+            iValue = 4 + 6 * (space - 81);
         } else if (space <= 100){
-            return 58 - 6 * (space - 91);
+            iValue = 58 - 6 * (space - 91);
+        } else {
+            iValue = 4;
         }
     }
+    return iValue;
 }
 
 
-// Returns the play space of a player based on their i
+// Returns the j of a space on the board for a specific player
 public int getSpaceY(int space){
-    if('a' == this.initial || 'b' == this.initial){
+    int jValue = 0;
+    if('1' == this.initial || '2' == this.initial){
         if (space <= 10){
-            return 29;
+            jValue = 29;
         } else if (space <= 20){
-            return 26;
+            jValue = 26;
         } else if (space <= 30){
-            return 23;
+            jValue = 23;
         } else if (space <= 40){
-            return 20;
+            jValue = 20;
         } else if (space <= 50){
-            return 17;
+            jValue = 17;
         } else if (space <= 60){
-            return 14;
+            jValue = 14;
         } else if (space <= 70){
-            return 11;
+            jValue = 11;
         } else if (space <= 80){
-            return 8;
+            jValue = 8;
         } else if (space <= 90){
-            return 5;
+            jValue = 5;
         } else if (space <= 100){
-            return 2;
+            jValue = 2;
+        } else {
+            jValue = 2;
         }
-    } else if ('c' == this.initial || 'd' == this.initial){
+    } else if ('3' == this.initial || '4' == this.initial){
         if (space <= 10){
-            return 30;
+            jValue = 30;
         } else if (space <= 20){
-            return 27;
+            jValue = 27;
         } else if (space <= 30){
-            return 24;
+            jValue = 24;
         } else if (space <= 40){
-            return 21;
+            jValue = 21;
         } else if (space <= 50){
-            return 18;
+            jValue = 18;
         } else if (space <= 60){
-            return 15;
+            jValue = 15;
         } else if (space <= 70){
-            return 12;
+            jValue = 12;
         } else if (space <= 80){
-            return 9;
+            jValue = 9;
         } else if (space <= 90){
-            return 6;
+            jValue = 6;
         } else if (space <= 100){
-            return 3;
+            jValue = 3;
+        } else {
+            jValue = 3;
         }
     }
+    return jValue;
+}
+
+public int chuteCheck(){
+    destination = 0;
+    if(this.getSpace() == 16){
+        destination = 6;
+    } else if (this.getSpace() == 47) {
+        destination = 26;
+    } else if (this.getSpace() == 49) {
+        destination = 11;
+    } else if (this.getSpace() == 56) {
+        destination = 53;
+    } else if (this.getSpace() == 62) {
+        destination = 19;
+    } else if (this.getSpace() == 64) {
+        destination = 60;
+    } else if (this.getSpace() == 87) {
+        destination = 24;
+    } else if (this.getSpace() ==93) {
+        destination = 73;
+    } else if (this.getSpace() == 95) {
+        destination = 75;
+    } else if (this.getSpace() == 98) {
+        destination = 78;
+    }
+    return destination;
+}
+
+public int ladderCheck(){
+    destination = 0;
+    if(this.getSpace() == 1){
+        destination = 38;
+    } else if (this.getSpace() == 4) {
+        destination = 14;
+    } else if (this.getSpace() == 9) {
+        destination = 31;
+    } else if (this.getSpace() == 21) {
+        destination = 42;
+    } else if (this.getSpace() == 28) {
+        destination = 84;
+    } else if (this.getSpace() == 36) {
+        destination = 44;
+    } else if (this.getSpace() == 51) {
+        destination = 67;
+    } else if (this.getSpace() ==71) {
+        destination = 91;
+    } else if (this.getSpace() == 80) {
+        destination = 100;
+    }
+    return destination;
 }
 }
