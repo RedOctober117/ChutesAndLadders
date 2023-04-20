@@ -9,7 +9,7 @@ import java.util.Random;
  *
  * @author ddeolloqui
  */
-public class Dice {
+public class DiceAnalogue {
 
     /**
      * @param args the command line arguments
