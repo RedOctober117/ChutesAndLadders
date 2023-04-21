@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+// Bruce, Ryan, Christina, Joshua, David, Donnie
 import java.util.Scanner;
 
 /**
@@ -221,7 +216,9 @@ public class Board {
         break;
     }
   }
-
+  /**
+   * Method to print the board
+   **/
   public void printBoard() {
     int a = 0;
     // Determine the number of players.

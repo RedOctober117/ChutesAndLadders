@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Bruce, Ryan, Christina
 
-/**
- *
- * @author rsdunn
- */
 /**
  * Token will create player objects that are then passed to Board() to draw the
  * Chutes and Ladders playspace.
@@ -92,7 +84,11 @@ public class Token {
     public int getPlayerY() {
         return this.playerY;
     }
-
+    /**
+     * Returns a players actual y
+     *
+     * @return interger y + 1 
+     **/
     public int getPlayerYActual() {
         int newValue = this.playerY + 1;
         return newValue;
@@ -106,7 +102,11 @@ public class Token {
     public char getInitial() {
         return this.initial;
     }
-
+    /**
+     * Returns a players play space
+     *
+     * @return integer coordinates converted to play space
+     **/
     public int getSpace() {
         /*
          * Summary:
@@ -328,6 +328,11 @@ public class Token {
     }
 
     // Returns the i of a space on the board for a specific player
+    /**
+     * Returns players x space 
+     * @param space current token space
+     * @return integer iValue 
+     **/ 
     public int getSpaceX(int space) {
         int iValue = 0;
         if ('1' == this.initial || '3' == this.initial) {
@@ -383,6 +388,11 @@ public class Token {
     }
 
     // Returns the j of a space on the board for a specific player
+    /**
+     * Returns players y space 
+     * @param  space current token space
+     * @return integer jValue 
+     **/ 
     public int getSpaceY(int space) {
         int jValue = 0;
         if ('1' == this.initial || '2' == this.initial) {
@@ -437,6 +447,11 @@ public class Token {
         return jValue;
     }
 
+    /**
+     * Returns the resulting space after landing on a chute  
+     *
+     * @return integer destination 
+     **/ 
     public int chuteCheck() {
         destination = 0;
         if (this.getSpace() == 16) {
@@ -463,6 +478,11 @@ public class Token {
         return destination;
     }
 
+    /**
+     * Returns the resulting space after landing on a ladder   
+     *
+     * @return integer destination 
+     **/ 
     public int ladderCheck() {
         destination = 0;
         if (this.getSpace() == 1) {
