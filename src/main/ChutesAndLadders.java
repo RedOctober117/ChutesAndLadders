@@ -54,6 +54,7 @@ public class ChutesAndLadders {
       input = in.nextLine();
     }
     roll = ((int) (6.0 * Math.random()) + 1);
+    DiceAnalogue.printRoll(roll);
     player1.setPosition(player1.getSpaceX(roll), player1.getSpaceY(roll));
     b1.printBoard();
     System.out.println("You rolled a " + roll);
@@ -76,6 +77,7 @@ public class ChutesAndLadders {
       input = in.nextLine();
     }
     roll = ((int) (6.0 * Math.random()) + 1);
+    DiceAnalogue.printRoll(roll);
     player2.setPosition(player2.getSpaceX(roll), player2.getSpaceY(roll));
     b1.printBoard();
     System.out.println("You rolled a " + roll);
@@ -99,6 +101,7 @@ public class ChutesAndLadders {
         input = in.nextLine();
       }
       roll = ((int) (6.0 * Math.random()) + 1);
+      DiceAnalogue.printRoll(roll);
       player3.setPosition(player3.getSpaceX(roll), player3.getSpaceY(roll));
       b1.printBoard();
       System.out.println("You rolled a " + roll);
@@ -121,6 +124,7 @@ public class ChutesAndLadders {
           input = in.nextLine();
         }
         roll = ((int) (6.0 * Math.random()) + 1);
+        DiceAnalogue.printRoll(roll);
         player4.setPosition(player4.getSpaceX(roll), player4.getSpaceY(roll));
         b1.printBoard();
         System.out.println("You rolled a " + roll);
@@ -147,7 +151,8 @@ public class ChutesAndLadders {
         System.out.print("Player 1: Type \"ready\" to roll your dice: ");
         input = in.nextLine();
       }
-      roll = (int) (6.0 * Math.random()) + 1;
+      roll = ((int) (6.0 * Math.random()) + 1);
+      DiceAnalogue.printRoll(roll);
       updatedSpace = player1.getSpace() + roll;
       player1.setPosition(player1.getSpaceX(updatedSpace), player1.getSpaceY(updatedSpace));
       b1.printBoard();
@@ -176,7 +181,8 @@ public class ChutesAndLadders {
         System.out.print("Player 2: Type \"ready\" to roll your dice: ");
         input = in.nextLine();
       }
-      roll = (int) (6.0 * Math.random()) + 1;
+      roll = ((int) (6.0 * Math.random()) + 1);
+      DiceAnalogue.printRoll(roll);
       updatedSpace = player2.getSpace() + roll;
       player2.setPosition(player2.getSpaceX(updatedSpace), player2.getSpaceY(updatedSpace));
       b1.printBoard();
@@ -207,7 +213,8 @@ public class ChutesAndLadders {
           System.out.print("Player 3: Type \"ready\" to roll your dice: ");
           input = in.nextLine();
         }
-        roll = (int) (6.0 * Math.random()) + 1;
+        roll = ((int) (6.0 * Math.random()) + 1);
+        DiceAnalogue.printRoll(roll);
         updatedSpace = player3.getSpace() + roll;
         player3.setPosition(player3.getSpaceX(updatedSpace), player3.getSpaceY(updatedSpace));
         b1.printBoard();
@@ -237,7 +244,8 @@ public class ChutesAndLadders {
             System.out.print("Player 4: Type \"ready\" to roll your dice: ");
             input = in.nextLine();
           }
-          roll = (int) (6.0 * Math.random()) + 1;
+	  roll = ((int) (6.0 * Math.random()) + 1);
+          DiceAnalogue.printRoll(roll);
           updatedSpace = player4.getSpace() + roll;
           player4.setPosition(player4.getSpaceX(updatedSpace), player4.getSpaceY(updatedSpace));
           b1.printBoard();
